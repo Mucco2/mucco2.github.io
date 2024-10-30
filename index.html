@@ -1,25 +1,11 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootst
-       rap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootst
-       rap.bundle.min.js"></script>
-       </head>
-       <body>
-       <div class="container">
-       </div>
-       </body>   
-
-
-
-
-       <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV</title>
+    <title>Mirsad Kose - CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,68 +51,138 @@
             bottom: 0;
             width: 100%;
         }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .portfolio-item {
+            position: relative;
+        }
+        .portfolio-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .portfolio-image:hover {
+            transform: scale(1.05);
+            border-color: #333;
+        }
+        .portfolio-caption {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 0.5em;
+            color: #333;
+        }
+        #contact {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Mirsad Kose</h1>
-        <p>Welcome to My CV</p>
+    <!-- Header Section with Image -->
+    <header class="container">
+        <div class="d-flex align-items-center justify-content-center">
+            <img src="IMG_0036.jpg" alt="Mirsad Kose" class="profile-pic">
+            <div>
+                <h1>Mirsad Kose</h1>
+                <h5>Welcome to My CV</h5>
+            </div>
+        </div>
     </header>
 
     <!-- Navigation -->
     <nav>
         <a href="#home">Home</a>
-        <a href="#Om mig">Om Mig</a>
+        <a href="#Om-mig">Om Mig</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Kontakt</a>
+        <a href="programmer.html" target="_blank">Programmer</a>
     </nav>
 
     <div class="container">
         <!-- Home Section -->
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to my online CV! I am a [your profession] with experience in [relevant fields]. Here you can find more information about my skills, projects, and how to contact me.</p>
+        <section id="home"> 
+            <h2 class="text-center">Hjem</h2>
+            <h4>Velkommen til mit online CV!</h4>
+              <p>Jeg er en engageret professionel med erfaring inden for [relevante områder]. 
+                Her kan du finde mere information om mine kompetencer, projekter og hvordan du kan kontakte mig.
+                Udover mit arbejde er jeg en fysisk aktiv person, der elsker at dyrke fitness og kampsport. 
+                Jeg har også en stor interesse for madlavning og bruger ofte tid på at eksperimentere i køkkenet. 
+                Derudover nyder jeg at programmere og har en stærk passion for IT og kodning.</p>
         </section>
 
         <!-- About Section -->
-        <section id="Om mig">
-            <h2>Om Mig</h2>
+        <section id="Om-mig">
+            <h2 class="text-center">Om Mig</h2>
             <p>Jeg er en frisk ung mand med store ambitioner i livet. Jeg er godt i gang med at realiserer mine drømme og er optaget af
-                 at udvikle mine relationelle kompetencer for at udvikle mig selv.  Jeg er ikke bange for at tage ansvar og kæmpe for det
-                  jeg ønsker at opnå. jeg er altid imødekommende og kan godt lide at være disciplineret i mit arbejde så jeg for det bedste ud af mig selv. </p>
+                 at udvikle mine relationelle kompetencer for at udvikle mig selv. Jeg er ikke bange for at tage ansvar og kæmpe for det
+                 jeg ønsker at opnå. Jeg er altid imødekommende og kan godt lide at være disciplineret i mit arbejde, så jeg får det bedste ud af mig selv.</p>
         </section>
 
         <!-- Portfolio Section -->
         <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Below are some of the projects I have worked on:</p>
+            <h2 class="text-center">Portfolio</h2>
+            <h4>her nede kan i se oplysninger om skole og arbejder</h4>
             <ul>
-                <li>Project 1 - Brief description of the project</li>
-                <li>Project 2 - Brief description of the project</li>
-                <li>Project 3 - Brief description of the project</li>
-                <!-- Add more projects as needed -->
+                <li>1: Min uddannelseshistorik – Her kan I se de skoler og uddannelser, jeg har gennemført.</li>
+                <li>2: Min arbejdshistorik – Her kan I se, hvor jeg arbejder, og hvor jeg tidligere har været ansat.</li>
+                <li>3: Jeg har en solid baggrund inden for objektorienteret programmering med C# og erfaring med udvikling
+                     af desktop-applikationer i Windows Forms. Jeg behersker HTML og CSS og har udviklet flere hjemmesider.
+                      Min interesse for programmering begyndte med Python, hvor jeg udviklede en Discord-bot for at automatisere
+                       gruppestyring. Jeg har desuden erfaring med SQL og databaseoprettelse både på SQL og Linux, og jeg
+                        interesserer mig også for server- og Linux-administration. </li>
             </ul>
+            
+            
+        <!-- Enhanced Images Row -->
+<div class="row text-center">
+    <div class="col-md-4 mb-3">
+        <div class="portfolio-item">
+            <img src="Udklip2.jpg" style="width: 100%;" alt="Project 1" class="img-fluid rounded shadow portfolio-image">
+            <p class="portfolio-caption">Uddannelser</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="portfolio-item">
+            <img src="Udklip4.jpg" style="width: 100%;" alt="Project 2" class="img-fluid rounded shadow portfolio-image">
+            <p class="portfolio-caption">Arbejde</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="portfolio-item">
+            <img src="programming-coding-icon-logo-design-template-vector.jpg" style="width: 100%;" alt="Project 3" class="img-fluid rounded shadow portfolio-image">
+            <p class="portfolio-caption">Project 3</p>
+        </div>
+    </div>
+</div>
+
+            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact</h2>
-            <p>If you would like to get in touch, please feel free to contact me:</p>
-            <ul>
-                <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></li>
-                <li>Phone: +123-456-7890</li>
+            <h2>Kontakt</h2>
+            <p>Hvis du ønsker at komme i kontakt, er du meget velkommen til at kontakte mig.</p>
+            <ul class="list-unstyled">
+                <li>Email: <a href="mailto:mucco2635@gmail.com">Mucco2635@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/mirsad-k%C3%B6se-807559282/" target="_blank">Mirsad LinkedIn Profile</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/mirsadkse/" target="_blank">Mirsad Instagram</a></li>
+                <li>Phone: +45-93832610</li>
             </ul>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Your Name</p>
+        <p>&copy; 2024 Mirsad Kose</p>
     </footer>
 
 </body>
 </html>
-
+    
