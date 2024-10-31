@@ -88,13 +88,36 @@
     <!-- Header Section with Image -->
     <header class="container">
         <div class="d-flex align-items-center justify-content-center">
-            <img src="IMG_0036.jpg" alt="Mirsad Kose" class="profile-pic">
+            <img src="IMG_0036.jpg" alt="Mirsad Kose" class="profile-pic" id="zoomable-img">
             <div>
                 <h1>Mirsad Kose</h1>
                 <h5>Velkommen til min CV</h5>
             </div>
         </div>
     </header>
+    
+    <style>
+        /* CSS */
+        .profile-pic {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .zoom {
+            transform: scale(2.0);
+            z-index: 10;
+            position: relative;
+        }
+    </style>
+    
+    <script>
+        // JavaScript
+        const img = document.getElementById('zoomable-img');
+    
+        img.addEventListener('click', function() {
+            img.classList.toggle('zoom');
+        });
+    </script>
+    
 
     <!-- Navigation -->
     <nav>
@@ -141,26 +164,51 @@
             
             
         <!-- Enhanced Images Row -->
-<div class="row text-center">
-    <div class="col-md-4 mb-3">
-        <div class="portfolio-item">
-            <img src="uddan.jpg" style="width: 100%;" alt="Project 1" class="img-fluid rounded shadow portfolio-image">
-            <p class="portfolio-caption">Uddannelser</p>
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <div class="portfolio-item">
+                    <img src="uddan.jpg" style="width: 100%;" alt="Project 1" class="img-fluid rounded shadow portfolio-image">
+                    <p class="portfolio-caption">Uddannelser</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="portfolio-item">
+                    <img src="Udklip10.jpg" style="width: 100%;" alt="Project 2" class="img-fluid rounded shadow portfolio-image">
+                    <p class="portfolio-caption">Arbejde</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="portfolio-item">
+                    <img src="programming-coding-icon-logo-design-template-vector.jpg" style="width: 100%;" alt="Project 3" class="img-fluid rounded shadow portfolio-image">
+                    <p class="portfolio-caption">Project 3</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4 mb-3">
-        <div class="portfolio-item">
-            <img src="Udklip10.jpg" style="width: 100%;" alt="Project 2" class="img-fluid rounded shadow portfolio-image">
-            <p class="portfolio-caption">Arbejde</p>
-        </div>
-    </div>
-    <div class="col-md-4 mb-3">
-        <div class="portfolio-item">
-            <img src="programming-coding-icon-logo-design-template-vector.jpg" style="width: 100%;" alt="Project 3" class="img-fluid rounded shadow portfolio-image">
-            <p class="portfolio-caption">Project 3</p>
-        </div>
-    </div>
-</div>
+        
+        <style>
+            /* CSS */
+            .portfolio-image {
+                transition: transform 0.3s ease; /* Tilføj en glidende effekt */
+                cursor: pointer; /* Ændre markøren for at indikere, at det kan klikkes */
+            }
+            .zoom {
+                transform: scale(2.5); /* Zoom ind til 1.5 gange den originale størrelse */
+                z-index: 10; /* Sørg for, at billedet vises over andre elementer */
+                position: relative; /* Gør billedet relativt positioneret for z-index at fungere */
+            }
+        </style>
+        
+        <script>
+            // JavaScript
+            const portfolioImages = document.querySelectorAll('.portfolio-image');
+        
+            portfolioImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    img.classList.toggle('zoom'); // Toggle zoom-klasse ved klik
+                });
+            });
+        </script>
+        
 
             </div>
         </section>
