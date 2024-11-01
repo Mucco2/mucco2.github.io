@@ -120,13 +120,30 @@
     
 
     <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#Om-mig">Om Mig</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Kontakt</a>
-        <a href="programmer.html" target="_blank">Programmer</a>
-    </nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4 text-center">
+          <h5 class="text-white h4">Menu</h5>
+          <a href="#home" class="text-white d-block">Home</a>
+          <a href="#Om-mig" class="text-white d-block">Om Mig</a>
+          <a href="#portfolio" class="text-white d-block">Portfolio</a>
+          <a href="#contact" class="text-white d-block">Kontakt</a>
+          <a href="programmer.html" target="_blank" class="text-white d-block">Programmer</a>
+        </div>
+      </div>
+      
+      <!-- Centered Navbar with Toggler Button -->
+      <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <div class="container-fluid d-flex justify-content-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Add Bootstrap JavaScript at the end of the body section if not already included -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
 
     <div class="container">
         <!-- Home Section -->
