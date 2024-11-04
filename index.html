@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirsad Kose - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,8 +19,6 @@
             text-align: center;
         }
         nav {
-            display: flex;
-            justify-content: center;
             background-color: #555;
         }
         nav a {
@@ -47,8 +44,6 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
         .profile-pic {
@@ -57,6 +52,13 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .zoom {
+            transform: scale(2.0);
+            z-index: 10;
+            position: relative;
         }
         .portfolio-item {
             position: relative;
@@ -67,6 +69,7 @@
             object-fit: cover;
             border: 3px solid #ddd;
             transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
         }
         .portfolio-image:hover {
             transform: scale(1.05);
@@ -85,112 +88,65 @@
 </head>
 <body>
 
-    <!-- Header Section with Image -->
-    <header class="container">
-        <div class="d-flex align-items-center justify-content-center">
-            <img src="IMG_0036.jpg" alt="Mirsad Kose" class="profile-pic" id="zoomable-img">
-            <div>
-                <h1>Mirsad Kose</h1>
-                <h5>Velkommen til min CV</h5>
-            </div>
+<header class="container">
+    <div class="d-flex align-items-center justify-content-center">
+        <img src="IMG_0036.jpg" alt="Mirsad Kose" class="profile-pic" id="zoomable-img">
+        <div>
+            <h1>Mirsad Kose</h1>
+            <h5>Velkommen til min CV</h5>
         </div>
-    </header>
-    
-    <style>
-        /* CSS */
-        .profile-pic {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .zoom {
-            transform: scale(2.0);
-            z-index: 10;
-            position: relative;
-        }
-    </style>
-    
-    <script>
-        // JavaScript
-        const img = document.getElementById('zoomable-img');
-    
-        img.addEventListener('click', function() {
-            img.classList.toggle('zoom');
-        });
-    </script>
-    
+    </div>
+</header>
 
-     <!-- Navbar -->
-<!-- Centered Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
     <div class="container">
         <a class="navbar-brand" href="#">Min Side</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Collapsible Navbar Content -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarToggleExternalContent">
             <ul class="navbar-nav text-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home" style="color: white;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Om-mig"style="color: white;">Om Mig</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio"style="color: white;">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  href="#contact "style="color: white;">Kontakt</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programmer.html" target="_blank"style="color: white;">Programmer</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#home" style="color: white;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Om-mig" style="color: white;">Om Mig</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio" style="color: white;">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" style="color: white;">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="programmer.html" target="_blank" style="color: white;">Programmer</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Add Bootstrap JavaScript at the end of the body section -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      
+<div class="container">
+    <section id="home"> 
+        <h2 class="text-center">Hjem</h2>
+        <h4>Velkommen til mit online CV!</h4>
+        <p>Jeg er en engageret professionel med erfaring inden for [relevante områder]. 
+            Her kan du finde mere information om mine kompetencer, projekter og hvordan du kan kontakte mig.
+            Udover mit arbejde er jeg en fysisk aktiv person, der elsker at dyrke fitness og kampsport. 
+            Jeg har også en stor interesse for madlavning og bruger ofte tid på at eksperimentere i køkkenet. 
+            Derudover nyder jeg at programmere og har en stærk passion for IT og kodning.</p>
+    </section>
 
-    <div class="container">
-        <!-- Home Section -->
-        <section id="home"> 
-            <h2 class="text-center">Hjem</h2>
-            <h4>Velkommen til mit online CV!</h4>
-              <p>Jeg er en engageret professionel med erfaring inden for [relevante områder]. 
-                Her kan du finde mere information om mine kompetencer, projekter og hvordan du kan kontakte mig.
-                Udover mit arbejde er jeg en fysisk aktiv person, der elsker at dyrke fitness og kampsport. 
-                Jeg har også en stor interesse for madlavning og bruger ofte tid på at eksperimentere i køkkenet. 
-                Derudover nyder jeg at programmere og har en stærk passion for IT og kodning.</p>
-        </section>
+    <section id="Om-mig">
+        <h2 class="text-center">Om Mig</h2>
+        <p>Jeg er en frisk ung mand med store ambitioner i livet. Jeg er godt i gang med at realiserer mine drømme og er optaget af
+            at udvikle mine relationelle kompetencer for at udvikle mig selv. Jeg er ikke bange for at tage ansvar og kæmpe for det
+            jeg ønsker at opnå. Jeg er altid imødekommende og kan godt lide at være disciplineret i mit arbejde, så jeg får det bedste ud af mig selv.</p>
+    </section>
 
-        <!-- About Section -->
-        <section id="Om-mig">
-            <h2 class="text-center">Om Mig</h2>
-            <p>Jeg er en frisk ung mand med store ambitioner i livet. Jeg er godt i gang med at realiserer mine drømme og er optaget af
-                 at udvikle mine relationelle kompetencer for at udvikle mig selv. Jeg er ikke bange for at tage ansvar og kæmpe for det
-                 jeg ønsker at opnå. Jeg er altid imødekommende og kan godt lide at være disciplineret i mit arbejde, så jeg får det bedste ud af mig selv.</p>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <h2 class="text-center">Portfolio</h2>
-            <h4>her nede kan i se oplysninger om skole og arbejder</h4>
-            <ul>
-                <li>1: Min uddannelseshistorik – Her kan I se de skoler og uddannelser, jeg har gennemført.</li>
-                <li>2: Min arbejdshistorik – Her kan I se, hvor jeg arbejder, og hvor jeg tidligere har været ansat.</li>
-                <li>3: Jeg har en solid baggrund inden for objektorienteret programmering med C# og erfaring med udvikling
-                     af desktop-applikationer i Windows Forms. Jeg behersker HTML og CSS og har udviklet flere hjemmesider.
-                      Min interesse for programmering begyndte med Python, hvor jeg udviklede en Discord-bot for at automatisere
-                       gruppestyring. Jeg har desuden erfaring med SQL og databaseoprettelse både på SQL og Linux, og jeg
-                        interesserer mig også for server- og Linux-administration. </li>
-            </ul>
-            
-            
-        <!-- Enhanced Images Row -->
+    <section id="portfolio">
+        <h2 class="text-center">Portfolio</h2>
+        <h4>her nede kan i se oplysninger om skole og arbejder</h4>
+        <ul>
+            <li>1: Min uddannelseshistorik – Her kan I se de skoler og uddannelser, jeg har gennemført.</li>
+            <li>2: Min arbejdshistorik – Her kan I se, hvor jeg arbejder, og hvor jeg tidligere har været ansat.</li>
+            <li>3: Jeg har en solid baggrund inden for objektorienteret programmering med C# og erfaring med udvikling
+                 af desktop-applikationer i Windows Forms. Jeg behersker HTML og CSS og har udviklet flere hjemmesider.
+                  Min interesse for programmering begyndte med Python, hvor jeg udviklede en Discord-bot for at automatisere
+                   gruppestyring. Jeg har desuden erfaring med SQL og databaseoprettelse både på SQL og Linux, og jeg
+                    interesserer mig også for server- og Linux-administration. </li>
+        </ul>
+        
         <div class="row text-center">
             <div class="col-md-4 mb-3">
                 <div class="portfolio-item">
@@ -207,57 +163,67 @@
             <div class="col-md-4 mb-3">
                 <div class="portfolio-item">
                     <img src="programming-coding-icon-logo-design-template-vector.jpg" style="width: 100%;" alt="Project 3" class="img-fluid rounded shadow portfolio-image">
-                    <p class="portfolio-caption">Projecter</p>
+                    <p class="portfolio-caption">Projekter</p>
                 </div>
             </div>
         </div>
-        
-        <style>
-            /* CSS */
-            .portfolio-image {
-                transition: transform 0.3s ease; /* Tilføj en glidende effekt */
-                cursor: pointer; /* Ændre markøren for at indikere, at det kan klikkes */
-            }
-            .zoom {
-                transform: scale(2.5); /* Zoom ind til 1.5 gange den originale størrelse */
-                z-index: 10; /* Sørg for, at billedet vises over andre elementer */
-                position: relative; /* Gør billedet relativt positioneret for z-index at fungere */
-            }
-        </style>
-        
-        <script>
-            // JavaScript
-            const portfolioImages = document.querySelectorAll('.portfolio-image');
-        
-            portfolioImages.forEach(img => {
-                img.addEventListener('click', function() {
-                    img.classList.toggle('zoom'); // Toggle zoom-klasse ved klik
-                });
-            });
-        </script>
-        
+    </section>
 
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Hvis du ønsker at komme i kontakt, er du meget velkommen til at kontakte mig.</p>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Navn</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
-        </section>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Besked</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </section>
+</div>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Hvis du ønsker at komme i kontakt, er du meget velkommen til at kontakte mig.</p>
-            <ul class="list-unstyled">
-                <li>Email: <a href="mailto:mucco2635@gmail.com">Mucco2635@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/mirsad-k%C3%B6se-807559282/" target="_blank">Mirsad LinkedIn Profile</a></li>
-                <li>Instagram: <a href="https://www.instagram.com/mirsadkse/" target="_blank">Mirsad Instagram</a></li>
-                <li>Phone: +45-93832610</li>
-            </ul>
-        </section>
-    </div>
+<footer>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Mirsad Kose</p>
-    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('zoomable-img').addEventListener('click', function() {
+        this.classList.toggle('zoom');
+    });
 
+    document.querySelectorAll('.portfolio-image').forEach(img => {
+        img.addEventListener('click', function() {
+            this.classList.toggle('zoom');
+        });
+    });
+</script>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Kontakt</h2>
+    <ul class="list-unstyled">
+        <li>Email: <a href="mailto:mucco2635@gmail.com">Mucco2635@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/mirsad-k%C3%B6se-807559282/" target="_blank">Mirsad LinkedIn Profile</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/mirsadkse/" target="_blank">Mirsad Instagram</a></li>
+        <li>Phone: +45-93832610</li>
+    </ul>
+</section>
+</div>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2024 Mirsad Kose</p>
+</footer>
+</script>
 </body>
 </html>
-    
