@@ -172,62 +172,32 @@
     <section id="contact">
         <h2>Kontakt</h2>
         <p>Hvis du ønsker at komme i kontakt, er du meget velkommen til at kontakte mig.</p>
-        <form id="contact-form">
+        
+        <!-- Form integrated with FormSubmit -->
+        <form id="contact-form" action="https://formsubmit.co/Mucco2635@gmail.com" method="POST">
+            <!-- Optional hidden field for FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you"> <!-- Replace with your actual thank-you page URL -->
+            
             <div class="mb-3">
                 <label for="name" class="form-label">Navn</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
+            
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
+            
             <div class="mb-3">
                 <label for="message" class="form-label">Besked</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
             </div>
+            
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </section>
     
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-    
-            // Prepare the data to be sent
-            const data = {
-                name: name,
-                email: email,
-                message: message
-            };
-    
-            // Use fetch API to send data to your server
-            fetch('/send-message', { // Replace with your actual endpoint
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                alert('Besked sendt!'); // Notify the user that the message was sent
-                document.getElementById('contact-form').reset(); // Reset the form fields
-            })
-            .catch(error => {
-                console.error('Fejl ved afsendelse:', error);
-                alert('Der opstod en fejl. Prøv venligst igen.'); // Notify the user of an error
-            });
-        });
-    </script>
     
 
 <footer>
