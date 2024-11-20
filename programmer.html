@@ -16,6 +16,14 @@
             padding: 1.5em;
             text-align: center;
         }
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333;
+        }
         .program-item {
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -58,14 +66,17 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-        <div class="container">
-            <a class="navbar-brand" href="#">Min Side</a>
+        <div class="container justify-content-center">
+            <a href="https://github.com/Mucco2" target="_blank" style="display: inline-flex; align-items: center;">
+                <img src="github-mark-white.png" alt="Mirsad Kose" class="profile-pic" id="zoomable-img" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                <i class="fas fa-user">github</i>
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarToggleExternalContent">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarToggleExternalContent" style="flex-grow: 0;">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item"><a class="nav-link" href="biler.html" target="_blank" style="color: white;">Min store passion</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html" style="color: white;">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" style="color: white;">Kontakt</a></li>
                     <li class="nav-item"><a class="nav-link" href="programmer.html" target="_blank" style="color: white;">Programmer</a></li>
@@ -86,7 +97,7 @@
             <!-- Program 1 -->
             <div class="col-md-4 mb-4">
                 <div class="program-item">
-                    <img src="ardo - Kopi.jpg" style="width: 370px;" alt="Program 1" class="program-image">
+                    <img src="ardo - Kopi.jpg" alt="Program 1" class="program-image">
                     <h2 class="program-title">Arduino</h2>
                     <p class="program-description">jeg har lavet et Arduino-trafiklys, der lyser i den rigtige rækkefølge og sørger for, at trafikken fungerer korrekt
                         Arduino er en open-source elektronikplatform baseret på nemt tilgængelig hardware og software, designet til at hjælpe alle, der ønsker at lave interaktive projekter. Platformen fungerer ved at registrere inputs fra forskellige sensorer og påvirker omgivelserne ved at kontrollere lys, motorer og andre aktuatorer.
