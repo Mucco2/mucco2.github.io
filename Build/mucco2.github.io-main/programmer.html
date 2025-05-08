@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Programmer - Mirsad Kose</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333;
+        }
+        .program-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .program-item:hover {
+            transform: scale(1.02);
+        }
+        .program-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .program-title {
+            font-size: 1.25em;
+            margin: 0.5em 0;
+            color: #333;
+        } 
+        .program-description {
+            font-size: 1em;
+            color: #555;
+        }
+        .program-link {
+            margin-top: 0.5em;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <div class="container justify-content-center">
+            <a href="https://github.com/Mucco2" target="_blank" style="display: inline-flex; align-items: center;">
+                <img src="github-mark-white.png" alt="Mirsad Kose" class="profile-pic" id="zoomable-img" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                <i class="fas fa-user">github</i>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarToggleExternalContent" style="flex-grow: 0;">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: white;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: white;">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programmer.html" target="_blank" style="color: white;">Programmer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paymen.html" target="_blank" style="color: white;"><i class="fas fa-code"></i> Vare</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Mine Programmer</h1>
+        <p>Her kan du se de projekter og programmer, jeg har udviklet.</p>
+    </header>
+
+    <!-- Programs Grid -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Program 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="program-item">
+                    <img src="ardo - Kopi.jpg" alt="Program 1" class="program-image">
+                    <h2 class="program-title">Arduino</h2>
+                    <p class="program-description">jeg har lavet et Arduino-trafiklys, der lyser i den rigtige rækkefølge og sørger for, at trafikken fungerer korrekt
+                        Arduino er en open-source elektronikplatform baseret på nemt tilgængelig hardware og software, designet til at hjælpe alle, der ønsker at lave interaktive projekter. Platformen fungerer ved at registrere inputs fra forskellige sensorer og påvirker omgivelserne ved at kontrollere lys, motorer og andre aktuatorer.
+                        Man kan programmere Arduino ved at skrive kode i Arduino-programmeringssproget og bruge udviklingsmiljøet til at styre og skabe forskellige funktioner.</p>
+                    <a href="https://www.arduino.cc/" target="_blank" class="btn btn-primary program-link">Arduino</a>
+                </div>
+            </div>
+            <!-- Program 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="program-item">
+                    <img src="c-sharp-blog - Kopi.jpg" alt="Program 2" class="program-image">
+                    <h2 class="program-title">C# Objektorienteret</h2>
+                    <p class="program-description">Fordele ved Objektorienteret Programmering (OOP) i C#
+                        C# er objektorienteret og bruger klasser og objekter til at strukturere koden omkring data og funktioner. Dette giver flere fordele i både terminal- og Windows Forms-applikationer:
+                        Modularitet og Genanvendelighed: Koden opdeles i genanvendelige klasser, f.eks. til brugere, produkter eller databaser, hvilket sparer tid og gør det nemmere at udvide programmet.
+                        Overblik og Struktur: OOP skaber en klar struktur, som gør koden lettere at forstå og vedligeholde, især i større projekter som Windows Forms-applikationer.
+                        Enkelt Vedligeholdelse: Ændringer i en klasse påvirker ikke hele koden, hvilket gør det nemt at opdatere specifik funktionalitet
+                        Arv og Polymorfi: Klasser kan udvides med nye funktioner, og polymorfi tillader, at forskellige objekter behandles ensartet, hvilket øger fleksibiliteten.</p>
+                    <a href="https://www.youtube.com/watch?v=iA0XZwFqqKI&ab_channel=Simplilearn" target="_blank" class="btn btn-primary program-link">C# objektorienteret video</a>
+                </div>
+            </div>
+            <!-- Program 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="program-item">
+                    <img src="669SQL - Kopi.jpg" alt="Program 3" class="program-image">
+                    <h2 class="program-title">SQL Database</h2>
+                    <p class="program-description">Du har oprettet og administreret en SQL-database ved hjælp af SQL Server, som du bruger til forskellige C#-projekter, både i
+                        Windows Forms og almindelige konsolprogrammer. Databasen er opbygget med tabelstrukturer, der understøtter de data og funktioner,
+                         du har brug for i dine programmer, og du bruger SQL-forespørgsler (queries) til at hente, opdatere og administrere disse data.
+                       Derudover har du også eksperimenteret med SQL på Linux, hvor du selv har oprettet forespørgsler og konfigureret databasen fra
+                        bunden. Denne opsætning har gjort dig i stand til at forstå og bruge SQL på tværs af operativsystemer og har givet dig en
+                         fleksibel tilgang til databaseadministration i dine programmeringsprojekter.</p>
+                    <a href="https://lucid.app/documents#/home?folder_id=recent" target="_blank" class="btn btn-primary program-link">Lucid til at oprette nem database</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="overflow-auto">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="min-width: 1000px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+       
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Skærmbillede (5).jpg.png" class="d-block" style="width: 1000px; height: auto; margin: 0 auto;" alt="Slide 1">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="Skærmbillede (6).jpg.png" class="d-block" style="width: 1000px; height: auto; margin: 0 auto;" alt="Slide 2">
+            </div>
+          
+            <div class="carousel-item">
+                <img src="Skærmbillede (7).jpg.png" class="d-block" style="width: 1000px; height: auto; margin: 0 auto;" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+    <div class="container-fluid p-4 d-block" style="background-color: #333;"></div>
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: blue;
+            background-size: 100%; /* Adjust icon size if needed */
+            border-radius: 10%;  /* Optional: make the icon circular */
+        }
+    </style>
+    
+    <!-- Contact Section -->
+<section id="contact" style="padding: 20px; background-color: #f9f9f9; text-align: center;">
+    <h2>Kontakt Mig</h2>
+    <ul class="contact-list list-unstyled" style="list-style: none; padding: 0; font-size: 1.1em;">
+        <li>Email: <a href="mailto:mucco2635@gmail.com">mucco2635@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/mirsad-k%C3%B6se-807559282/" target="_blank">Mirsad LinkedIn Profile</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/mirsadkse/" target="_blank">Mirsad Instagram</a></li>
+        <li>Phone: +45-93832610</li> 
+    </ul>
+    <div class="contact-images" style="margin-top: 20px;">
+        <img src="instagram_2111463.png" alt="Instagram Logo" style="width: 60px; margin: 10px;">
+        <img src="social_13670350.png" alt="Project Image" style="width: 60px; margin: 10px;">
+        <img src="email_873388.png" alt="Another Project Image" style="width: 50px; margin: 10px;" class="img-fluid rounded shadow">
+    </div>
+</section>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2024 Mirsad Kose</p>
+        </footer>
+        </script>
+        </body>
+        </html>
+        
+    
