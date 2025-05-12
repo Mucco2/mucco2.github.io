@@ -29,6 +29,12 @@ body {
     color: var(--text-color);
 }
 
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
 .header{
     position: fixed;
     top: 0;
@@ -68,3 +74,20 @@ body {
     display: none;
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content h3
+{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
