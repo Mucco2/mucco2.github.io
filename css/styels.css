@@ -130,3 +130,37 @@ span {
     color: var(--secondary-bg-color);
     box-shadow: 0 0 1rem var(--Main-color);
 }
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--Main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--Main-color);
+    font-size: 1.6rem;
+    color: var(--secondary-bg-color) ;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--secondary-bg-color);
+}
+
+.about-img {
+    width: 25vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
