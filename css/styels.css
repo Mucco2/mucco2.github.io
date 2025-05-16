@@ -376,5 +376,25 @@ background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
 
 
 
+/* BREAKPOINTS */
 
+@MEDIA (max-width: 1200px) {
+     html  {
+        font-size: 55%;       
+    }
+}
 
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    
+        section {
+            padding: 10rem 3% 2rem;
+        }
+
+        .footer {
+            padding: 2rem 3%;
+        }
+    }
+
+}
