@@ -830,3 +830,27 @@ footer .f-top:hover{color:var(--accent-ink);border-color:var(--accent)}
   background:var(--accent-soft);color:var(--accent-ink);
   font-family:var(--mono);font-weight:800;font-size:14px;letter-spacing:.02em;margin-bottom:6px;
 }
+
+/* ---------- weft · graphite with Weft's soft lavender ---------- */
+.wft{color:#f1f1f4;background:linear-gradient(135deg,#0e0f12,#1b1c22 55%,#2d2e38)}
+.wft .stage{background:linear-gradient(135deg,#0e0f12,#1b1c22 55%,#2d2e38)}
+.wft .kicker{color:#c4b5fd}
+.wft .step h3{color:#f3f2fb}
+.wft .step p{color:#c9c9d6}
+.wft .step-dots i.on{background:#c4b5fd}
+.wft .plink:hover{background:#fff;color:#1b1c22}
+.wft .browser{background:#111216}
+.wft .shots{background:#f3f4f6}
+.wft .pill-new{color:#0e0f12;background:#c4b5fd}
+
+/* ---------- vestegnens IT · charcoal into the petrol blue of vestegnensit.dk ---------- */
+.vit{color:#eaf6fd;background:linear-gradient(135deg,#131517,#1a2a33 55%,#0b5b7c)}
+.vit .stage{background:linear-gradient(135deg,#131517,#1a2a33 55%,#0b5b7c)}
+.vit .kicker{color:#7dd3fc}
+.vit .step h3{color:#eaf6fd}
+.vit .step p{color:#c2d6e2}
+.vit .step-dots i.on{background:#38bdf8}
+.vit .plink:hover{background:#fff;color:#0b5b7c}
+.vit .browser{background:#0d1418}
+.vit .shots{background:#fff}
+.vit .pill-new{color:#071a24;background:#7dd3fc}
