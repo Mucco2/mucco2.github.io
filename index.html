@@ -1,199 +1,447 @@
 <!DOCTYPE html>
- <html lang="da">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mirsad Kose - Portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Mirsad Kose - CV</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- custom css-->
-    <link rel="stylesheet" href="css/styels.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirsad Köse — Full-stack developer (C# · Angular)</title>
+<meta name="description" content="Full-stack developer in C#/.NET and Angular from Copenhagen. Datatekniker programming apprentice at TEC and co-founder of Vestegnens IT-løsninger. Real-time chat platform, price calculator, production data tools and websites for local businesses.">
+<meta name="theme-color" content="#0d7a6c" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a1112" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d7a6c'/%3E%3Ctext x='32' y='41' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='800' fill='%23f3f7f6' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://mucco2.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mucco2.github.io/">
+<meta property="og:site_name" content="Mirsad Köse">
+<meta property="og:title" content="Mirsad Köse — Full-stack developer (C# · Angular)">
+<meta property="og:description" content="Datatekniker programming apprentice and co-founder of Vestegnens IT-løsninger. I build complete systems, from database and API to the interface people use.">
+<meta property="og:image" content="https://mucco2.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mirsad Köse, full-stack developer in Copenhagen.">
+<meta property="og:locale" content="en_DK">
+<meta property="og:locale:alternate" content="da_DK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mirsad Köse — Full-stack developer (C# · Angular)">
+<meta name="twitter:description" content="Datatekniker programming apprentice and co-founder of Vestegnens IT-løsninger in Copenhagen.">
+<meta name="twitter:image" content="https://mucco2.github.io/og.png">
+
+<script>
+  /* runs before first paint so a dark-mode visitor never sees a white flash */
+  (function(){
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch(e){}
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+
+<link rel="preload" href="assets/fonts/schibsted-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=1">
 </head>
 <body>
-    <!-- headder design -->
-     <header class="header">
-        <a href="#" class="logo">portfolio</a>
-       <i class='bx bx-menu' id="menu-icon"></i> 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-     </header>
-     <!--home section design -->
-     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hey det er mig</h3>
-            <h1>Mirsad Kose</h1>
-            <h3>jeg er <span class="multiple-text"></span> </span></h3>
-            <p>Velkommen til min portfolio
-            Her kan du se et udvalg af mine projekter og få et indblik i, hvad jeg arbejder med som udvikler. Tak fordi du kigger forbi!
-             </p>
-                 <div class="social-media">
-                    <a href="https://www.facebook.com/mirsad.kose.9"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/mirsadkse/"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://x.com/Mucco58460659"><i class='bx bxl-twitter'></i></a>
-                    <a href="https://www.linkedin.com/in/mirsad-k%C3%B6se-807559282/"><i class='bx bxl-linkedin'></i></a>
-                 </div>
-                    <a href="pdf (9)cv.pdf" target="_blank" class="btn">Download CV</a>
+
+<!-- boot stinger: a terminal types, then the site is revealed. Skippable -->
+<noscript><style>#boot{display:none}html:not(.booted){overflow:auto}</style></noscript>
+<div id="boot" role="dialog" aria-label="Intro terminal">
+  <div class="term">
+    <div class="term-bar">
+      <button class="tl r" id="term-close" aria-label="Close terminal"></button><i class="tl y"></i><i class="tl g"></i>
+      <span>mirsad@copenhagen — pwsh</span>
+    </div>
+    <pre id="term-out"></pre>
+  </div>
+</div>
+
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mirsad Köse"><span class="ini" aria-hidden="true">MK</span><span class="full" aria-hidden="true">Mirsad Köse</span></a>
+    <div class="navlinks" id="navlinks">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#work" data-i18n="nav_work">Work</a>
+      <a href="#experience" data-i18n="nav_xp">Experience</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#certificates" data-i18n="nav_certs">Certificates</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <button class="lang" id="langbtn" aria-label="Switch language"><span id="l-en" class="on">EN</span> / <span id="l-da">DA</span></button>
+      <button class="theme" id="themebtn" aria-label="Toggle dark mode"><svg class="ic-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg><svg class="ic-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  </div>
+</nav>
+<div class="mobile" id="mobile">
+  <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#work" data-i18n="nav_work">Work</a>
+  <a href="#experience" data-i18n="nav_xp">Experience</a>
+  <a href="#skills" data-i18n="nav_skills">Skills</a>
+  <a href="#certificates" data-i18n="nav_certs">Certificates</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <div class="mobile-btns">
+    <button class="lang" id="langbtn2" aria-label="Switch language"><span id="l2-en" class="on">EN</span> / <span id="l2-da">DA</span></button>
+    <button class="theme" id="themebtn2" aria-label="Toggle dark mode"><svg class="ic-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg><svg class="ic-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </div>
+</div>
+
+<!-- ============ hero ============ -->
+<section class="scene hero" id="top" data-scene="pin">
+  <div class="stage">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h1 aria-label="Mirsad Köse">
+          <span class="ln"><span>Mirsad</span></span>
+          <span class="ln"><span><em>Köse</em></span></span>
+        </h1>
+        <p class="lede" data-i18n="lede">Full-stack developer in <strong>C#/.NET</strong> and <strong>Angular</strong>, in my third year as a Datatekniker programming apprentice at TEC. I build complete systems, from the database and API to the screen people use, and I co-founded <strong>Vestegnens IT-løsninger</strong>, where I build websites and software for local businesses.</p>
+        <div class="meta">
+          <span data-i18n="meta_loc">Greater Copenhagen</span>
+          <a href="mailto:Mucco2635@gmail.com">Mucco2635@gmail.com</a>
+          <a href="https://github.com/Mucco2" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/mirsad-kose" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <div class="home-img">
-        <img src="removebg-removebg-preview.png">
-        </div>
-     </section>
-
-
-        <!-- about section design -->
-        <section class="about" id="about">
-            <div  class="about-img">
-                <img src="unnamed1111.jpg">
-            </div>
-
-                <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
-                <h3>fullstack udvikler lærling</h3>
-                <p>Jeg er en frisk ung mand med store ambitioner i livet, og jeg er godt i gang med
-                     at realisere mine drømme. Jeg har erfaring inden for både teknisk udvikling og
-                      relationelle kompetencer, som jeg løbende arbejder på at forbedre for at udvikle
-                       mig selv både professionelt og personligt. Som lærling på SKP er jeg engageret
-                        i at lære og vokse, og jeg ser frem til at blive taget godt imod som en del af
-                         et team, hvor jeg kan få praktisk erfaring og bidrage med mine færdigheder. Jeg
-                          er ikke bange for at tage ansvar og kæmpe for det, jeg ønsker at opnå, og jeg
-                           stræber altid efter at være disciplineret og levere mit bedste arbejde. Jeg er
-                            imødekommende og værdsætter at arbejde i et positivt og støttende miljø, hvor
-                             jeg kan lære af både mine kolleger og de udfordringer, jeg møder.</p>
-                    <a href="pdf (9)anso.pdf" target="_blank" class="btn">læs mere</a>
-                </div>
-        </section>
-        <!-- services section design -->
-        <section class="services" id="services">
-            <h2 class="heading">Mine <span>Services</span></h2>
-            <div class="services-container">
-                <div class="services-box">
-    <i class='bx bx-code-alt'></i>
-    <h3>Udvikling</h3>
-    <p>Jeg er en udvikler med erfaring i at skabe responsive og brugervenlige hjemmesider og apps ved hjælp af frontend-teknologier som HTML, CSS og JavaScript samt backend-teknologier som Node.js, Express og C#. Jeg har fokus på både funktionalitet og brugeroplevelse.</p>
-    <a href="https://www.ug.dk/uddannelser/erhvervsuddannelser/teknologibyggeriogtransport/data-og-kommunikationsuddannelsen" target="_blank" class="btn">læs mere</a>
-</div>
-
-<div class="services-box">
-    <i class='bx bx-bar-chart-alt'></i> 
-    <h3>Database håndtering</h3>
-    <p>Jeg har solid erfaring med at designe, strukturere og optimere databaser i SQL og NoSQL. Jeg sikrer, at databaserne er effektive, skalerbare og nemme at vedligeholde. Jeg arbejder med relationelle databaser som SQL Server og PostgreSQL og anvender best practices inden for datamodellering.</p>
-    <a href="https://www.youtube.com/watch?v=OT1RErkfLNQ&ab_channel=AlexTheAnalyst" target="_blank" class="btn">læs mere</a>
-</div>
-
-<div class="services-box">
-    <i class='bx bxs-paint'></i>
-    <h3>Diagrammer og Flowcharts</h3>
-    <p>Jeg har stor erfaring med at skabe visuelle diagrammer og flowcharts, som effektivt illustrerer processer og arbejdsgange. Jeg anvender værktøjer som Draw.io og Lucidchart til at opbygge overskuelige og professionelle diagrammer, der gør komplekse systemer lettere at forstå og kommunikere.</p>
-    <a href="https://lucid.co/" target="_blank" class="btn">læs mere</a>
-</div>
+      </div>
+      <div class="portrait">
+        <img src="assets/portrait.webp" alt="Portrait of Mirsad Köse" width="660" height="880">
+        <span class="p-cap"><b data-i18n="pcap_1">Full-stack developer</b><span>C#/.NET · Angular</span></span>
+      </div>
+    </div>
+  </div>
 </section>
-        <!-- portfolio section design -->
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">Mine <span>projekter</span></h2>
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="portfolio1.jpg">
-                    <div class="portfolio-layer">
-                        <h4>Infotavle</h4>
-                        <p>Jeg har arbejdet i en gruppe og udviklet en infotavle til TEC-elever. man kan bla: se trafik DSB rejseplanen Og vejrt</p>
-                        <a href="https://github.com/Mucco2/InfoTavle.git" target="_blank" ><i class='bx bx-link-external'></i></a>
-                        </div>
-            </div>
 
-            <div class="portfolio-box">
-                    <img src="portfolio2.jpg">
-                    <div class="portfolio-layer">
-                        <h4>Zoo-Management-System</h4>
-                        <p>her er et lille projekt fra h1 jeg har lavet en zoo management</p>
-                        <a href="https://github.com/Mucco2/Zoo-Management-System.git" target="_blank" ><i class='bx bx-link-external'></i></a>
-                        </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="portfolio3.jpg">
-                    <div class="portfolio-layer">
-                        <h4>Dungeon-Escape</h4>
-                        <p>jeg har lavet en lille terminal spil med c# det er et dungeon escape hvor man skal prøve at komme ud af en dungeon,</p>
-                        <a href="https://github.com/Mucco2/Dungeon-Escape.git" target="_blank" ><i class='bx bx-link-external'></i></a>
-                        </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="portfolio4.jpg">
-                    <div class="portfolio-layer">
-                        <h4>Portfolio</h4>
-                        <p>her er mit portfolio som du faktisk er inde på</p>
-                        <a href="https://github.com/Mucco2/mucco2.github.io.git" target="_blank" ><i class='bx bx-link-external'></i></a>
-                        </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="portfolio5.jpg">
-                    <div class="portfolio-layer">
-                        <h4>camel-to-snake</h4>
-                        <p> et C# program der gør store bogstaver om til små,</p>
-                        <a href="https://github.com/Mucco2/camel-to-snake.git" target="_blank" ><i class='bx bx-link-external'></i></a>
-                        </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="portfolio6.jpg">
-                    <div class="portfolio-layer">
-                        <h4>Ecommerce</h4>
-                        <p>Kommer snart </p>
-                        <a href="#" ><i class='bx bx-link-external'></i></a>
-            </div>
-        </section>
-
-        <!-- contact section design -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Kontakt <span>Mig!</span></h2>
-            <form action="https://formspree.io/f/mbloerev" method="POST" target="_blank">
-  <div class="input-box">
-    <input type="text" name="navn" placeholder="Full Navn" required>
-    <input type="email" name="email" placeholder="Email adresse" required>
+<!-- ============ the claim ============ -->
+<section class="scene claim" id="about" data-scene="pin">
+  <div class="stage">
+    <div class="wrap">
+      <p class="claim-text" data-words data-i18n="claim">I build the whole system, from database to interface, and I keep going until it runs for the people who use it.</p>
+    </div>
   </div>
-  <div class="input-box">
-    <input type="text" name="telefon" placeholder="Telefon nummer">
-    <input type="text" name="emne" placeholder="Email Emne">
+</section>
+
+<!-- ============ three numbers that can be checked ============ -->
+<section class="numbers" data-scene="view">
+  <div class="wrap numbers-row">
+    <div class="num"><div class="n"><span data-count="3">0</span><small data-i18n="n1_s">rd year</small></div><div class="l" data-i18n="n1">As a Datatekniker programming apprentice at TEC, building full-stack systems every day</div></div>
+    <div class="num"><div class="n"><span data-count="50">0</span><small>+</small></div><div class="l" data-i18n="n2">Pages on vestegnensit.dk, the company site I build and run with my own SEO tooling</div></div>
+    <div class="num"><div class="n"><span data-count="40">0</span><small>+</small></div><div class="l" data-i18n="n3">Repositories on GitHub, from console apps to real-time platforms</div></div>
   </div>
-  <textarea name="besked" cols="30" rows="10" placeholder="Din Besked" required></textarea>
-  <input type="submit" value="Send Besked" class="btn">
-</form>
+</section>
 
-        </section>
-
-     <!-- footer design -->
-     <footer class="footer">
-     <div class="footer-text">
-        <p>Copyright &copy; 2025 by Mirsad Kose | All Rights Reserved.</p>
+<!-- ============ SOPChat ============ -->
+<section class="scene weft" id="work" data-scene="pin" data-steps="3">
+  <div class="stage">
+    <div class="wrap gathr-grid">
+      <div class="gathr-copy">
+        <div class="kicker">
+          <span data-i18n="k_sop">Real-time chat platform</span>
+          <span class="pill-new" data-i18n="team4">Team of 4</span>
         </div>
-
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i> </a>
+        <h2>SOPChat</h2>
+        <div class="steps">
+          <div class="step" data-step="0" data-shot="0">
+            <h3 data-i18n="s1h">A Discord for the classroom</h3>
+            <p data-i18n="s1p">Servers, channels, private chats, file sharing and a members list, built for the apprentices at TEC. One PC hosts it, and everyone else just opens it in the browser.</p>
+          </div>
+          <div class="step" data-step="1" data-shot="0">
+            <h3 data-i18n="s2h">Real-time and locked down</h3>
+            <p data-i18n="s2p">Messages arrive instantly over SignalR. Login uses JWT with refresh tokens, and the server re-checks membership and rate-limits every user, so nobody can read a channel they are not in.</p>
+          </div>
+          <div class="step" data-step="2" data-shot="1">
+            <h3 data-i18n="s3h">Clean architecture, one Docker image</h3>
+            <p data-i18n="s3p">Clean layers (Domain, Application, Infrastructure, API), EF Core on SQL Server, an admin dashboard and a daily curriculum quiz with 1,000 questions. Ships as one Docker image.</p>
+          </div>
         </div>
-    </footer>
+        <div class="step-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="ptags">C# · ASP.NET Core · SignalR · Angular · EF Core · SQL Server · Docker</div>
+        <div class="plinks">
+          <a class="plink" href="mailto:Mucco2635@gmail.com?subject=Code%20request%3A%20SOPChat"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span data-i18n="code_req">Code on request</span></a>
+        </div>
+      </div>
+      <div class="gathr-visual weft-visual">
+        <div class="panel3d">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>sopchat · #general</span></div>
+            <div class="shots">
+              <img class="shot on" data-shot="0" src="assets/sopchat.webp" alt="SOPChat in dark mode: channels, a live conversation and the members list" width="1400" height="825" loading="lazy">
+              <img class="shot" data-shot="1" src="assets/sopchat-quiz.webp" alt="The SOPChat curriculum quiz with five main courses and 200 questions each" width="1400" height="825" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-   <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+<!-- ============ TaxaPris ============ -->
+<section class="scene weft dovo" id="taxapris" data-scene="pin" data-steps="3">
+  <div class="stage">
+    <div class="wrap gathr-grid">
+      <div class="gathr-copy">
+        <div class="kicker">
+          <span data-i18n="k_taxa">Price calculator · school assignment</span>
+        </div>
+        <h2>TaxaPris</h2>
+        <div class="steps">
+          <div class="step" data-step="0" data-shot="0">
+            <h3 data-i18n="t1h">A price in seconds</h3>
+            <p data-i18n="t1p">Built for a taxi company's customer service. Pick two addresses, and the route, distance and driving time are filled in from OpenStreetMap. Out comes a full price breakdown with every line and a total.</p>
+          </div>
+          <div class="step" data-step="1" data-shot="1">
+            <h3 data-i18n="t2h">Business rules as code</h3>
+            <p data-i18n="t2p">Day, evening and holiday tariffs, two vehicle types and six surcharges, from the airport to the Great Belt and Øresund bridges. Each surcharge is its own class, so a new rule never touches the old ones.</p>
+          </div>
+          <div class="step" data-step="2" data-shot="1">
+            <h3 data-i18n="t3h">Locked down by tests</h3>
+            <p data-i18n="t3p">xUnit tests the pricing engine and Vitest tests the Angular app. One test reads the real tariff file and checks the company's official control price, so a wrong tariff fails the build.</p>
+          </div>
+        </div>
+        <div class="step-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="ptags">.NET 8 · ASP.NET Core Web API · Angular · Signals · xUnit · Vitest · OSRM</div>
+        <div class="plinks">
+          <a class="plink" href="mailto:Mucco2635@gmail.com?subject=Code%20request%3A%20TaxaPris"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span data-i18n="code_req">Code on request</span></a>
+        </div>
+      </div>
+      <div class="gathr-visual weft-visual">
+        <div class="panel3d">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>taxapris · prisberegner</span></div>
+            <div class="shots">
+              <img class="shot on" data-shot="0" src="assets/taxapris.webp" alt="TaxaPris: a trip from Rådhuspladsen to Copenhagen Airport with the route on a map and the price breakdown" width="1400" height="825" loading="lazy">
+              <img class="shot" data-shot="1" src="assets/taxapris-price.webp" alt="The TaxaPris price card with start fee, kilometres and minutes, and the calculation history" width="1400" height="825" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!--typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- ============ Vestegnens IT-løsninger ============ -->
+<section class="scene weft kvixa" id="vestegnen" data-scene="pin" data-steps="3">
+  <div class="stage">
+    <div class="wrap gathr-grid">
+      <div class="gathr-copy">
+        <div class="kicker">
+          <span data-i18n="k_vit">My company · co-founder</span>
+          <span class="pill-new" data-i18n="live">Live</span>
+        </div>
+        <h2>Vestegnens IT</h2>
+        <div class="steps">
+          <div class="step" data-step="0" data-shot="0">
+            <h3 data-i18n="v1h">Co-founded in 2025</h3>
+            <p data-i18n="v1p">Vestegnens IT-løsninger builds websites, web apps and integrations for small businesses west of Copenhagen. I work on development, hosting and technical SEO, and talk with customers from the first meeting to launch.</p>
+          </div>
+          <div class="step" data-step="1" data-shot="1">
+            <h3 data-i18n="v2h">Fast by design</h3>
+            <p data-i18n="v2p">The company site has more than 50 pages with no heavy framework: modular CSS, a build step that minifies everything and trims the icon font to the icons actually used, and URLs, redirects and sitemap generated from one source.</p>
+          </div>
+          <div class="step" data-step="2" data-shot="1">
+            <h3 data-i18n="v3h">Checked before every deploy</h3>
+            <p data-i18n="v3p">My own Node scripts audit internal links, canonical routes, redirects and indexing headers before anything goes live. Alongside it: sites for a logistics company, a jeweller, a hair salon and a temp agency.</p>
+          </div>
+        </div>
+        <div class="step-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="ptags">HTML · CSS · JavaScript · Node.js · Astro · Technical SEO · Cloudflare</div>
+        <div class="plinks">
+          <a class="plink" href="https://vestegnensit.dk" target="_blank" rel="noopener"><svg class="ic ic-globe" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.95a15.6 15.6 0 00-1.38-3.56A8.030 8.030 0 0118.9 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.960h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14a7.9 7.9 0 010-4h3.38a16.5 16.5 0 000 4H4.26zm.84 2h2.95c.3 1.26.76 2.46 1.38 3.56A7.99 7.99 0 015.1 16zm2.95-8H5.1a7.990 7.990 0 014.33-3.56A15.6 15.6 0 008.05 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82A13.7 13.7 0 0112 19.96zM14.34 14H9.66a14.5 14.5 0 010-4h4.68a14.5 14.5 0 010 4zm.28 5.56c.62-1.1 1.08-2.3 1.38-3.56h2.95a7.99 7.99 0 01-4.33 3.56zM16.36 14a16.5 16.5 0 000-4h3.38a7.9 7.9 0 010 4h-3.38z"/></svg><span>vestegnensit.dk</span></a>
+        </div>
+      </div>
+      <div class="gathr-visual weft-visual">
+        <div class="panel3d">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>vestegnensit.dk</span></div>
+            <div class="shots">
+              <img class="shot on" data-shot="0" src="assets/vestegnen.webp" alt="The vestegnensit.dk front page: web agency for websites, web apps and apps" width="1400" height="825" loading="lazy">
+              <img class="shot" data-shot="1" src="assets/vestegnen-services.webp" alt="The core services on vestegnensit.dk: web development, app development and backend and APIs" width="1400" height="825" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-     <!-- custom js -->
-     <script src='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js'></script>
+<!-- ============ more projects, vertical scroll drives a horizontal track ============ -->
+<section class="scene hscroll" id="projects" data-scene="pin">
+  <div class="stage">
+    <div class="hs-head wrap">
+      <div class="kicker" data-i18n="k_proj">More projects</div>
+      <h2 data-i18n="h_proj">Broad by nature</h2>
+    </div>
+    <div class="track" id="track">
+      <article class="hcard feature-card">
+        <div class="top"><h3 data-i18n="m_h">Production data tools</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="m_role">MEC APEM · in use on the factory floor</div>
+        <p data-i18n="m_p">Python and Streamlit apps that read machine and test data from the factory network and show jobs, progress and test results for an assembly line. Handed over with a setup guide, so staff without programming experience can run them.</p>
+        <div class="tags">Python · Streamlit · <span data-i18n="m_t">Data analysis</span></div>
+      </article>
+      <article class="hcard">
+        <div class="top"><h3 data-i18n="b_h">Cinema booking</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="b_role">Full-stack · C# and Angular</div>
+        <p data-i18n="b_p">Movies, screenings, seat selection and bookings with snacks. An ASP.NET Core API with JWT login and hashed passwords, EF Core migrations and seed data, and an Angular client.</p>
+        <div class="tags"><a href="https://github.com/Mucco2/BioFullstacApp" target="_blank" rel="noopener">GitHub</a> · C# · EF Core · JWT · Angular</div>
+      </article>
+      <article class="hcard">
+        <div class="top"><h3 data-i18n="d_h">Account platform</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="d_role">Full-stack · Python and React</div>
+        <p data-i18n="d_p">Sign up, email verification, password reset, an account dashboard and an admin panel to manage users. A Django REST backend with permissions and a React frontend.</p>
+        <div class="tags"><a href="https://github.com/Mucco2/FullDjangoApp" target="_blank" rel="noopener">GitHub</a> · Django REST · React · Vite</div>
+      </article>
+      <article class="hcard">
+        <div class="top"><h3 data-i18n="h_h">School system, MVC + API</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="h_role">Backend · C#</div>
+        <p data-i18n="h_p">An ASP.NET MVC app with API controllers for students, teachers and subjects, a service layer behind interfaces and file logging, comparing controller APIs with minimal APIs.</p>
+        <div class="tags"><a href="https://github.com/Mucco2/Techybrid" target="_blank" rel="noopener">GitHub</a> · C# · ASP.NET MVC · REST</div>
+      </article>
+      <article class="hcard">
+        <div class="top"><h3 data-i18n="i_h">InfoTavle</h3><span class="yr">2025</span></div>
+        <div class="role" data-i18n="i_role">Team project · TEC</div>
+        <p data-i18n="i_p">An information screen for TEC students with live departures from Rejseplanen and DSB, the weather and a news feed, built together in a team.</p>
+        <div class="tags"><a href="https://github.com/Mucco2/InfoTavle" target="_blank" rel="noopener">GitHub</a> · JavaScript · <span data-i18n="i_t">Public APIs</span></div>
+      </article>
+      <article class="hcard">
+        <div class="top"><h3 data-i18n="o_h">IoT: watering and sensors</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="o_role">Hardware · C++ and Python</div>
+        <p data-i18n="o_p">An automatic plant-watering system in C++ with PlatformIO, and a Raspberry Pi in Python that reads sensor data over serial and passes it on with publish/subscribe messaging.</p>
+        <div class="tags">C++ · PlatformIO · Python · Raspberry Pi</div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Custom js -->
-    <script src="js/Java.js"></script>
+<!-- ============ experience ============ -->
+<section class="xp-scene" id="experience">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_xp">Experience</div>
+    <h2 data-i18n="h_xp">Where I have worked</h2>
+    <div class="timeline" data-scene="view">
+      <div class="tl-line" aria-hidden="true"></div>
+      <div class="job hl" data-scene="view">
+        <span class="yr when now"><b>2025</b><i aria-hidden="true">→</i><b data-i18n="now">now</b></span>
+        <div>
+          <h3 data-i18n="j1_h">Co-founder and developer</h3>
+          <div class="org">Vestegnens IT-løsninger</div>
+          <p data-i18n="j1_p">Build and run websites and web apps for local businesses: development, hosting, domains and technical SEO. I meet customers directly and take projects from the first conversation to launch.</p>
+        </div>
+      </div>
+      <div class="job" data-scene="view">
+        <span class="yr when"><b>2026</b></span>
+        <div>
+          <h3 data-i18n="j2_h">Developer, production data tools</h3>
+          <div class="org">MEC APEM</div>
+          <p data-i18n="j2_p">Built Python and Streamlit tools that turn machine and test data from an assembly line into overviews of jobs, progress and test results, and wrote the setup guide so staff can run them without help.</p>
+        </div>
+      </div>
+      <div class="job" data-scene="view">
+        <span class="yr when now"><b>2024</b><i aria-hidden="true">→</i><b data-i18n="now">now</b></span>
+        <div>
+          <h3 data-i18n="j3_h">Programmer apprentice (SKP)</h3>
+          <div class="org">TEC, Technical Education Copenhagen</div>
+          <p data-i18n="j3_p">Full-time school-based apprenticeship in Ballerup. I build full-stack systems in teams with C#/.NET, Angular, SQL Server, tests and Docker, the way a development team works in a company. SOPChat and TaxaPris came from here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ============ skills ============ -->
+<section class="skills-scene" id="skills">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_skills">Toolkit</div>
+    <h2 data-i18n="h_skills">What I work with</h2>
+    <div class="skills">
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s1_h">Backend</h4>
+        <ul><li>C# · .NET</li><li>ASP.NET Core Web API</li><li>Entity Framework Core</li><li>SignalR</li><li data-i18n="s1_1">JWT, roles and rate limiting</li><li>Django REST · Node.js</li></ul>
+      </div>
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s2_h">Frontend</h4>
+        <ul><li>Angular (signals, standalone)</li><li>TypeScript · JavaScript</li><li>React · React Native (Expo)</li><li>Astro · Tailwind CSS</li><li>HTML · CSS</li></ul>
+      </div>
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s3_h">Data</h4>
+        <ul><li>SQL Server</li><li data-i18n="s3_1">Views, stored procedures and triggers</li><li>PostgreSQL · SQLite</li><li>Python · Streamlit</li><li data-i18n="s3_2">Database design</li></ul>
+      </div>
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s4_h">Quality and DevOps</h4>
+        <ul><li>Git · GitHub</li><li>Docker</li><li>xUnit · Vitest</li><li>GitHub Actions</li><li>Cloudflare · Netlify</li><li data-i18n="s4_1">Clean architecture · SOLID</li></ul>
+      </div>
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s5_h">Hardware and AI</h4>
+        <ul><li>C++ · PlatformIO</li><li>Raspberry Pi</li><li>Claude · ChatGPT · Copilot</li><li data-i18n="s5_1">AI-assisted development</li></ul>
+      </div>
+      <div class="skillset" data-scene="view">
+        <h4 data-i18n="s6_h">Languages</h4>
+        <ul><li data-i18n="s6_1">Danish, native</li><li data-i18n="s6_2">Turkish, native</li><li data-i18n="s6_3">English, fluent</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ certificates ============ -->
+<section class="certs-scene" id="certificates">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_certs">Certificates</div>
+    <h2 data-i18n="h_certs">Always learning</h2>
+    <div class="certs">
+      <a class="cert plain" href="https://www.linkedin.com/in/mirsad-kose/details/certifications/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">AI</span><span class="ct"><span class="badge" data-i18n="b_ai">AI</span><span class="date">2026</span></span><h3>Google AI Essentials</h3><span class="by">Google · Coursera</span></a>
+      <a class="cert plain" href="https://www.linkedin.com/in/mirsad-kose/details/certifications/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">S</span><span class="ct"><span class="badge" data-i18n="b_code">Programming</span><span class="date">2025</span></span><h3>Learning SOLID Programming Principles</h3><span class="by">LinkedIn Learning</span></a>
+      <a class="cert plain" href="https://www.linkedin.com/in/mirsad-kose/details/certifications/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">git</span><span class="ct"><span class="badge" data-i18n="b_tools">Tools</span><span class="date">2025</span></span><h3>Learning Software Version Control</h3><span class="by">LinkedIn Learning</span></a>
+    </div>
+    <div class="certs-more"><a href="https://www.linkedin.com/in/mirsad-kose/details/certifications/" target="_blank" rel="noopener"><span data-i18n="certs_more">See them on LinkedIn</span> →</a></div>
+  </div>
+</section>
+
+<!-- ============ education ============ -->
+<section class="edu-scene" id="education">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_edu">Education</div>
+    <h2 data-i18n="h_edu">My path so far</h2>
+    <div class="edu-row goal" data-scene="view">
+      <span class="yr when goal"><b data-i18n="e2_y">Next</b></span>
+      <div>
+        <h3 data-i18n="e2_h">An apprenticeship as a programmer</h3>
+        <div class="s" data-i18n="e2_s">I am looking for a company in Greater Copenhagen where I can finish my Datatekniker education and ship production code with a team. I can start right away.</div>
+      </div>
+      <span></span>
+    </div>
+    <div class="edu-row" data-scene="view">
+      <span class="yr when now"><b>2024</b><i aria-hidden="true">→</i><b data-i18n="now">now</b></span>
+      <div>
+        <h3 data-i18n="e1_h">Datatekniker, specialising in programming</h3>
+        <div class="org">TEC, Technical Education Copenhagen · Ballerup</div>
+        <div class="s" data-i18n="e1_s">Main courses in programming and OOP, databases and EF Core, web and REST APIs, patterns, testing and architecture, and DevOps and security.</div>
+      </div>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ contact ============ -->
+<section class="contact-scene" id="contact" data-scene="view">
+  <div class="wrap">
+    <div class="contact">
+      <div class="kicker" data-i18n="k_contact">Contact</div>
+      <h2 data-i18n="h_contact">Let us build something</h2>
+      <p data-i18n="contact_p">I am looking for an apprenticeship as a programmer in Greater Copenhagen, and I am open to student jobs and freelance projects. The code behind the projects above is available on request. The fastest way to reach me is email.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:Mucco2635@gmail.com"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span data-i18n="btn_mail">Email me</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/mirsad-kose" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.630-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a>
+        <a class="btn" href="https://github.com/Mucco2" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12.1c0 5.1 3.3 9.5 7.9 11 .6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.600-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.300 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6a11.6 11.6 0 007.9-11C23.5 5.7 18.3.5 12 .5z"/></svg><span>GitHub</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="f-copy" data-i18n="copy">© 2026 Mirsad Köse. All rights reserved.</span>
+    <span class="f-right">
+      <span><span data-i18n="foot">Design by</span> <a href="https://teksen42.github.io/" target="_blank" rel="noopener">Yasir Teksen</a></span>
+      <a class="f-top" href="#top"><span data-i18n="to_top">Back to top</span> ↑</a>
+    </span>
+  </div>
+</footer>
+
+<script src="main.js?v=1"></script>
 </body>
-
 </html>
-        
-    
-
-
-    
