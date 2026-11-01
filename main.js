@@ -209,6 +209,7 @@
     h_contact: 'Lad os bygge noget',
     contact_p: 'Jeg søger en læreplads som programmør i Storkøbenhavn, gerne i et team der arbejder med DevOps, automation eller sikkerhed, og jeg er åben for studiejob og freelanceopgaver. Koden bag projekterne ovenfor kan fås på forespørgsel. Den hurtigste vej til mig er en mail.',
     btn_mail: 'Skriv til mig',
+    btn_cv: 'Hent CV',
     copy: '© 2026 Mirsad Köse. Alle rettigheder forbeholdes.',
     foot: 'Design af',
     to_top: 'Til toppen'
