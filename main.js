@@ -231,6 +231,9 @@
     document.querySelectorAll('#l-en,#l2-en').forEach(e => e.classList.toggle('on', l === 'en'));
     document.querySelectorAll('#l-da,#l2-da').forEach(e => e.classList.toggle('on', l === 'da'));
     document.querySelectorAll('[data-words]').forEach(splitWords); // re-split after innerHTML swap
+    /* the CV button follows the language: Danish site, Danish CV */
+    const cv = l === 'da' ? 'Mirsad-Kose-CV.pdf' : 'Mirsad-Kose-CV-EN.pdf';
+    document.querySelectorAll('[data-cv]').forEach(a => { a.href = 'assets/' + cv; a.download = cv; });
     measure();
   }
   document.querySelectorAll('#langbtn,#langbtn2').forEach(b =>
@@ -492,6 +495,7 @@ document.addEventListener('click', e => {
   if (h.startsWith('mailto:')) track('click-email', 'Clicked email');
   else if (h.includes('linkedin.com')) track('click-linkedin', 'Clicked LinkedIn');
   else if (h.includes('github.com')) track('click-github', 'Clicked GitHub');
+  else if (h.endsWith('.pdf')) track('download-cv-' + (h.includes('-EN') ? 'en' : 'da'), 'Downloaded CV (' + (h.includes('-EN') ? 'English' : 'Danish') + ')');
 });
 
 /* ---------- certificate viewer: cards open a lightbox, the link still works without JS ---------- */
