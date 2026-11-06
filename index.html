@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mirsad Köse — Full-stack developer (C# · Angular)</title>
-<meta name="description" content="Full-stack developer in C#/.NET and Angular from Copenhagen. Datatekniker programming apprentice at TEC and co-founder of Vestegnens IT-løsninger. Heading toward DevOps with Docker, Kubernetes and secure automation.">
+<meta name="description" content="Full-stack developer in C#/.NET and Angular from Copenhagen. Datatekniker programming apprentice at TEC and co-founder of Vestegnens IT-løsninger. Projects you can try: SOPChat, Nabolys, Kvixa, TaxaPris and Weft. Heading toward DevOps with Docker, Kubernetes and secure automation.">
 <meta name="theme-color" content="#0d7a6c" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a1112" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d7a6c'/%3E%3Ctext x='32' y='41' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='800' fill='%23f3f7f6' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
@@ -36,9 +36,11 @@
 </script>
 
 <link rel="preload" href="assets/fonts/schibsted-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=1">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
+
+<a class="skip" href="#about" data-i18n="skip">Skip to content</a>
 
 <!-- boot stinger: a terminal types, then the site is revealed. Skippable -->
 <noscript><style>#boot{display:none}html:not(.booted){overflow:auto}</style></noscript>
@@ -93,6 +95,7 @@
           <span class="ln"><span><em>Köse</em></span></span>
         </h1>
         <p class="lede" data-i18n="lede">Full-stack developer in <strong>C#/.NET</strong> and <strong>Angular</strong>, in my third year as a Datatekniker programming apprentice at TEC. I build complete systems, from the database and API to the screen people use, and I co-founded <strong>Vestegnens IT-løsninger</strong>, where I build websites and software for local businesses. Next, I am heading toward <strong>DevOps</strong>: Docker, Kubernetes and automation with security built in.</p>
+        <p class="status"><span data-i18n="status">Looking for an apprenticeship as a programmer, and I can start right away.</span> <a href="#work" data-i18n="jump">See the projects ↓</a></p>
         <div class="meta">
           <span data-i18n="meta_loc">Greater Copenhagen</span>
           <a href="mailto:Mucco2635@gmail.com">Mucco2635@gmail.com</a>
@@ -113,7 +116,8 @@
 <section class="scene claim" id="about" data-scene="pin">
   <div class="stage">
     <div class="wrap">
-      <p class="claim-text" data-words data-i18n="claim">I build the whole system, from database to interface, and I keep going until it runs for the people who use it.</p>
+      <p class="claim-text" data-words data-i18n="claim">I build <span class="ph" data-proof="whole">the whole system</span>, <span class="ph" data-proof="stack">from database to interface</span>, and I keep going <span class="ph" data-proof="live">until it runs for the people who use it</span>.</p>
+      <p class="proof" id="proof" aria-live="polite"></p>
     </div>
   </div>
 </section>
@@ -172,6 +176,102 @@
   </div>
 </section>
 
+<!-- ============ SOPChat: five real questions from the quiz ============ -->
+<section class="demo d-sop" id="sopchat-quiz">
+  <div class="wrap demo-split">
+    <div class="demo-copy">
+      <div class="kicker" data-i18n="k_quiz">Try it · SOPChat</div>
+      <h2 data-i18n="quiz_h">Take the quiz</h2>
+      <p class="demo-lede" data-i18n="quiz_p">Every day SOPChat gives each apprentice 10 questions from the five main courses, 10 points per right answer, with a leaderboard. Here are five of the 1,000 questions, one from each course.</p>
+      <p class="demo-note" data-i18n="quiz_note">In SOPChat the questions are in Danish. The English here is my translation.</p>
+    </div>
+    <div class="quiz" id="quiz"></div>
+  </div>
+</section>
+
+<!-- ============ Nabolys: preparedness app, team project ============ -->
+<section class="scene weft nbl" id="nabolys" data-scene="pin" data-steps="3">
+  <div class="stage">
+    <div class="wrap gathr-grid">
+      <div class="gathr-copy">
+        <div class="kicker">
+          <span data-i18n="k_nab">Preparedness app · in development</span>
+          <span class="pill-new" data-i18n="team">Team project</span>
+        </div>
+        <h2>Nabolys</h2>
+        <div class="steps">
+          <div class="step" data-step="0" data-shot="0">
+            <h3 data-i18n="nb1_h">Ready for the first three days</h3>
+            <p data-i18n="nb1_p">Nabolys helps a household get through the first three days of a crisis: stock with best-before dates, a three-day list from the authorities' advice, a family plan and an "I am OK" check-in.</p>
+          </div>
+          <div class="step" data-step="1" data-shot="0">
+            <h3 data-i18n="nb2_h">Works when the network is down</h3>
+            <p data-i18n="nb2_p">Phones close to each other pass messages on over Bluetooth, through native modules in Kotlin and Swift. What the family shares is encrypted on the phone, so the server cannot read it.</p>
+          </div>
+          <div class="step" data-step="2" data-shot="0">
+            <h3 data-i18n="nb3_h">Built with Yasir and Jawad</h3>
+            <p data-i18n="nb3_p">A team project with Yasir Teksen and Jawad Qayyum: an ASP.NET Core API on .NET 10 with Azure SQL and Entra ID, infrastructure in Bicep, CI in GitHub Actions and more than 2,300 automated tests.</p>
+          </div>
+        </div>
+        <div class="step-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="ptags">C# · .NET 10 · SignalR · Azure SQL · Bicep · React Native · Kotlin · Swift</div>
+        <div class="plinks">
+          <a class="plink" href="https://nabolys.azurewebsites.net/" target="_blank" rel="noopener"><svg class="ic ic-globe" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.95a15.6 15.6 0 00-1.38-3.56A8.03 8.03 0 0118.9 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14a7.9 7.9 0 010-4h3.38a16.5 16.5 0 000 4H4.26zm.84 2h2.95c.3 1.26.76 2.46 1.38 3.56A7.99 7.99 0 015.1 16zm2.95-8H5.1a7.99 7.99 0 014.33-3.56A15.6 15.6 0 008.05 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82A13.7 13.7 0 0112 19.96zM14.34 14H9.66a14.5 14.5 0 010-4h4.68a14.5 14.5 0 010 4zm.28 5.56c.62-1.1 1.08-2.3 1.38-3.56h2.95a7.99 7.99 0 01-4.33 3.56zM16.36 14a16.5 16.5 0 000-4h3.38a7.9 7.9 0 010 4h-3.38z"/></svg><span>nabolys.azurewebsites.net</span></a>
+          <a class="plink" href="#nabolys-demo"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span data-i18n="try_app">Try the app</span></a>
+        </div>
+      </div>
+      <div class="gathr-visual weft-visual">
+        <div class="panel3d">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>nabolys.azurewebsites.net</span></div>
+            <div class="shots">
+              <img class="shot on" data-shot="0" src="assets/demo/nb-site.webp" alt="The Nabolys website: ready for the first three days, with a waitlist" width="1400" height="825" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Nabolys: a phone you can click, and the three-day calculation ============ -->
+<section class="demo d-nb" id="nabolys-demo">
+  <div class="nb-proto" id="proto" data-screen="hjem">
+    <div class="wrap proto-grid">
+      <div class="proto-text">
+        <div class="kicker" data-i18n="k_try_nb">Try it · Nabolys</div>
+        <h2 class="proto-h" data-i18n="proto_h">Click around in the app</h2>
+        <p class="proto-note" data-i18n="proto_note">Screens from the app with an invented family. Tap the buttons on the phone, or pick a screen here. The app is not released yet.</p>
+        <ul class="proto-tabs" id="proto-tabs"></ul>
+        <div class="proto-actions">
+          <button class="netswitch" id="netswitch" type="button" aria-pressed="false"><span class="ns-dot" aria-hidden="true"></span><span id="netswitch-label"></span></button>
+        </div>
+      </div>
+      <div class="phone" id="phone">
+        <div class="screens" id="screens"></div>
+        <p class="toast" id="phone-toast" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="calc" id="calc">
+      <div class="calc-head">
+        <h3 data-i18n="calc_h">What does your household need?</h3>
+        <p data-i18n="calc_p">The Danish authorities recommend that you can manage on your own for three days in a crisis. It is guidance, not a duty. This is the same calculation as in the app, and each group says where the numbers come from.</p>
+      </div>
+      <div class="calc-grid">
+        <div class="steppers" id="steppers"></div>
+        <div class="calc-side">
+          <div class="calc-out" id="calc-out" aria-live="polite"></div>
+          <button type="button" class="calc-toggle" id="calc-toggle" aria-expanded="false" aria-controls="calc-full"></button>
+        </div>
+      </div>
+      <div class="calc-full" id="calc-full" hidden><div id="calc-list"></div></div>
+      <p class="calc-src" data-i18n="calc_src">Sources: <a href="https://samsik.dk/forberedt/" target="_blank" rel="noopener">Styrelsen for Samfundssikkerhed</a>, <a href="https://www.foedevarestyrelsen.dk/kost-og-foedevarer/foedevaresikkerhed/foedevareberedskab/forberedt-paa-kriser" target="_blank" rel="noopener">Fødevarestyrelsen</a> and <a href="https://www.nationalbanken.dk/da/viden-og-nyheder/presse/arkiv/2025/nationalbankens-nye-anbefalinger-om-betalinger-i-butikker-og-anden-fysisk-handel-06-10-2025" target="_blank" rel="noopener">Nationalbanken</a>. The authorities mention several things with no amount, and there the app counts at least one. Nabolys is a private project, not an authority.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ Kvixa: ordering platform sold through Vestegnens IT ============ -->
 <section class="scene weft kvixa" id="kvixa" data-scene="pin" data-steps="3">
   <div class="stage">
@@ -214,6 +314,52 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Kvixa: photos from the shop, then the order flow to try ============ -->
+<section class="demo d-kv" id="kvixa-demo">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_try_kv">Try it · Kvixa</div>
+    <h2 data-i18n="cw_h">In use every day in Greve</h2>
+    <p class="demo-lede" data-i18n="cw_note">Chicken N Chicken Waves takes its orders through Kvixa, at two kiosks in the shop and on the restaurant's own website.</p>
+    <div class="cw-photos">
+      <figure class="cw-photo cw-shop">
+        <img src="assets/demo/kvixa-photo.webp" alt="Two Kvixa self-service kiosks on a wooden counter at Chicken N Chicken Waves in Greve" width="1300" height="1864" loading="lazy">
+        <figcaption data-i18n="cap_cw4">Both kiosks in the shop</figcaption>
+      </figure>
+      <figure class="cw-photo cw-start">
+        <img src="assets/demo/kvixa-start.webp" alt="A Kvixa kiosk showing its start screen with a chicken wrap and the button to start an order" width="1100" height="1807" loading="lazy">
+        <figcaption data-i18n="cap_cw0">The start screen on the kiosk</figcaption>
+      </figure>
+      <figure class="cw-photo cw-front">
+        <img src="assets/demo/kvixa-front.webp" alt="A Kvixa kiosk showing the burger menu, with the card terminal beside it" width="1200" height="1600" loading="lazy">
+        <figcaption data-i18n="cap_cw3">The menu on the kiosk, with the card terminal</figcaption>
+      </figure>
+    </div>
+    <div class="kv" id="kv">
+      <h3 class="kv-h" data-i18n="kv_h">Order something, and follow it through the restaurant</h3>
+      <div class="kv-grid">
+        <div class="kv-col">
+          <p class="kv-step" data-i18n="kv_s1">1. The guest orders at the kiosk</p>
+          <div class="kiosk">
+            <div class="kiosk-top">Byens Grill</div>
+            <div class="kiosk-items" id="kiosk-items"></div>
+            <div class="kiosk-foot"><span id="kiosk-sum"></span><button type="button" id="kiosk-pay"></button></div>
+            <div class="kiosk-done" id="kiosk-done" role="status" hidden></div>
+          </div>
+        </div>
+        <div class="kv-col">
+          <p class="kv-step" data-i18n="kv_s2">2. The order lands on the counter screen. Tap Received, Ready and Handed over</p>
+          <div class="counter" id="counter"></div>
+        </div>
+        <div class="kv-col">
+          <p class="kv-step" data-i18n="kv_s3">3. The number moves on the TV</p>
+          <div class="tv" id="tv"></div>
+        </div>
+      </div>
+      <p class="demo-note" data-i18n="kv_note">A small example of the flow, coded for this page. It works in the same steps as Kvixa, and nothing is sent anywhere.</p>
     </div>
   </div>
 </section>
@@ -262,6 +408,21 @@
   </div>
 </section>
 
+<!-- ============ TaxaPris: the pricing engine, ported to the page ============ -->
+<section class="demo d-tx" id="taxapris-demo">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_try_tx">Try it · TaxaPris</div>
+    <h2 data-i18n="tx_h">What does the trip cost?</h2>
+    <p class="demo-lede" data-i18n="tx_p">The same pricing rules as in TaxaPris, rewritten in JavaScript for this page. Pick a car, a time and the surcharges, and the price breakdown follows. Try the standard trip, the one the test checks.</p>
+    <div class="tx" id="tx">
+      <div class="tx-form" id="tx-form"></div>
+      <div class="tx-mini" id="tx-mini" aria-hidden="true"></div>
+      <div class="tx-out" id="tx-out" aria-live="polite"></div>
+    </div>
+    <p class="demo-note" data-i18n="tx_note">In the real app the route, distance and driving time come from OpenStreetMap. The large-car rates are the company's official ones. The regular-car rates are placeholders in the project too, set so they hit the official control price for a standard trip.</p>
+  </div>
+</section>
+
 <!-- ============ Weft: planning app on Azure, team project ============ -->
 <section class="scene weft wft" id="weft" data-scene="pin" data-steps="3">
   <div class="stage">
@@ -303,6 +464,30 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Weft: the prototype screens, and a day that rearranges itself ============ -->
+<section class="demo d-wf" id="weft-demo">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_try_wf">Try it · Weft</div>
+    <h2 data-i18n="ws_h">What the app looks like</h2>
+    <p class="demo-lede" data-i18n="ws_note">Screens from the Weft prototype.</p>
+    <div class="w-strip">
+      <figure><img src="assets/demo/weft-idag.webp" alt="Weft: the plan for today with lectures, a shift, training and protected time" width="760" height="1607" loading="lazy"><figcaption data-i18n="cap_wa">Today, all in one plan</figcaption></figure>
+      <figure><img src="assets/demo/weft-ask.webp" alt="Weft: a chat where the user writes they are called in for a shift, and Weft moves the run" width="760" height="1607" loading="lazy"><figcaption data-i18n="cap_wb">Write what happened, and Weft moves the run</figcaption></figure>
+      <figure><img src="assets/demo/weft-recalc.webp" alt="Weft: the plan before and after, with what changes" width="760" height="1607" loading="lazy"><figcaption data-i18n="cap_wc">The plan before and after, ready to confirm</figcaption></figure>
+      <figure><img src="assets/demo/weft-baner.webp" alt="Weft: a week view with a shift and a lecture side by side" width="760" height="1607" loading="lazy"><figcaption data-i18n="cap_wd">What overlaps, side by side</figcaption></figure>
+    </div>
+    <div class="plan" id="plan">
+      <div class="plan-side">
+        <h3 data-i18n="plan_h">Something moves. What happens to the day?</h3>
+        <div class="plan-btns" id="plan-btns"></div>
+        <p class="plan-msg" id="plan-msg" aria-live="polite"></p>
+        <p class="demo-note" data-i18n="plan_note">A small example coded for this page. It is not Weft's real planner.</p>
+      </div>
+      <div class="plan-day" id="plan-day"></div>
     </div>
   </div>
 </section>
@@ -367,6 +552,12 @@
         <div class="tags">Python · Streamlit · <span data-i18n="m_t">Data analysis</span></div>
       </article>
       <article class="hcard">
+        <div class="top"><h3>Mosque-translate</h3><span class="yr">2026</span></div>
+        <div class="role" data-i18n="mt_role">Own project · Python and AI</div>
+        <p data-i18n="mt_p">Live subtitles in Danish and Turkish for the khutba, shown on a TV screen in the mosque. It hears whether the imam speaks Arabic or Turkish and switches by itself, and it recognises Quran recitation among 6,236 verses in about 130 ms and shows the official translations.</p>
+        <div class="tags">Python · Flask · Soniox · Claude API · <span data-i18n="mt_t">Speech to text</span></div>
+      </article>
+      <article class="hcard">
         <div class="top"><h3 data-i18n="b_h">Cinema booking</h3><span class="yr">2026</span></div>
         <div class="role" data-i18n="b_role">Full-stack · C# and Angular</div>
         <p data-i18n="b_p">Movies, screenings, seat selection and bookings with snacks. An ASP.NET Core API with JWT login and hashed passwords, EF Core migrations and seed data, and an Angular client.</p>
@@ -396,6 +587,40 @@
         <p data-i18n="o_p">An automatic plant-watering system in C++ with PlatformIO, and a Raspberry Pi in Python that reads sensor data over serial and passes it on with publish/subscribe messaging.</p>
         <div class="tags">C++ · PlatformIO · Python · Raspberry Pi</div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ how I work: four habits, each with the project that shows it ============ -->
+<section class="how-scene" id="how">
+  <div class="wrap">
+    <div class="kicker" data-i18n="k_how">How I work</div>
+    <h2 data-i18n="h_how">Four habits, with proof</h2>
+    <div class="how">
+      <div class="how-item" data-scene="view">
+        <span class="how-n" aria-hidden="true">01</span>
+        <h3 data-i18n="hw1_h">Rules become tests</h3>
+        <p data-i18n="hw1_p">In TaxaPris a test reads the real tariff file and checks the company's official control price. If someone types in a wrong rate, the build fails.</p>
+        <a class="how-from" href="#taxapris-demo">TaxaPris</a>
+      </div>
+      <div class="how-item" data-scene="view">
+        <span class="how-n" aria-hidden="true">02</span>
+        <h3 data-i18n="hw2_h">Security from the start</h3>
+        <p data-i18n="hw2_p">In SOPChat the server checks membership on every request and rate-limits every user, and login uses JWT with refresh tokens. Passwords are hashed and every input has a limit.</p>
+        <a class="how-from" href="#work">SOPChat</a>
+      </div>
+      <div class="how-item" data-scene="view">
+        <span class="how-n" aria-hidden="true">03</span>
+        <h3 data-i18n="hw3_h">Automate the way out</h3>
+        <p data-i18n="hw3_p">SOPChat ships as one Docker image, and before every deploy of vestegnensit.dk my own Node scripts check links, redirects and indexing headers. Kubernetes and CI/CD pipelines are next.</p>
+        <a class="how-from" href="#vestegnen">Vestegnens IT</a>
+      </div>
+      <div class="how-item" data-scene="view">
+        <span class="how-n" aria-hidden="true">04</span>
+        <h3 data-i18n="hw4_h">Built to be handed over</h3>
+        <p data-i18n="hw4_p">The production data tools at MEC APEM came with a setup guide, so staff without programming experience can run them on their own.</p>
+        <a class="how-from" href="#experience">MEC APEM</a>
+      </div>
     </div>
   </div>
 </section>
@@ -531,6 +756,10 @@
       <div class="kicker" data-i18n="k_contact">Contact</div>
       <h2 data-i18n="h_contact">Let us build something</h2>
       <p data-i18n="contact_p">I am looking for an apprenticeship as a programmer in Greater Copenhagen, ideally in a team that works with DevOps, automation or security, and I am open to student jobs and freelance projects. The code behind the projects above is available on request. The fastest way to reach me is email.</p>
+      <div class="mailrow">
+        <a class="mailaddr" href="mailto:Mucco2635@gmail.com">Mucco2635@gmail.com</a>
+        <button class="copy-mail" id="copy-mail" type="button" data-mail="Mucco2635@gmail.com">Copy</button>
+      </div>
       <div class="btns">
         <a class="btn primary" href="mailto:Mucco2635@gmail.com"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span data-i18n="btn_mail">Email me</span></a>
         <a class="btn" href="assets/Mirsad-Kose-CV-EN.pdf" download="Mirsad-Kose-CV-EN.pdf" data-cv><svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span data-i18n="btn_cv">Download CV</span></a>
@@ -551,7 +780,8 @@
   </div>
 </footer>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=3"></script>
+<script src="demos.js?v=1"></script>
 <!-- GoatCounter: privacy-friendly visitor stats, no cookies, no personal data -->
 <script data-goatcounter="https://mucco2635.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

@@ -91,7 +91,72 @@
     lede: 'Fullstack-udvikler i <strong>C#/.NET</strong> og <strong>Angular</strong>, på tredje år som datatekniker-elev med speciale i programmering på TEC. Jeg bygger hele systemer, fra databasen og API\'et til den skærm folk bruger, og jeg er medstifter af <strong>Vestegnens IT-løsninger</strong>, hvor jeg laver hjemmesider og software til lokale virksomheder. Næste skridt er <strong>DevOps</strong>: Docker, Kubernetes og automation med sikkerhed indbygget.',
     meta_loc: 'Storkøbenhavn',
     pcap_1: 'Fullstack-udvikler',
-    claim: 'Jeg bygger hele systemet, fra database til brugerflade, og jeg giver ikke op, før det kører for dem, der skal bruge det.',
+    claim: 'Jeg bygger <span class="ph" data-proof="whole">hele systemet</span>, <span class="ph" data-proof="stack">fra database til brugerflade</span>, og jeg giver ikke op, <span class="ph" data-proof="live">før det kører for dem, der skal bruge det</span>.',
+    skip: 'Spring til indholdet',
+    status: 'Jeg søger en læreplads som programmør og kan starte med det samme.',
+    jump: 'Se projekterne ↓',
+    /* try it: SOPChat quiz */
+    k_quiz: 'Prøv det · SOPChat',
+    quiz_h: 'Tag quizzen',
+    quiz_p: 'Hver dag giver SOPChat hver elev 10 spørgsmål fra de fem hovedforløb, 10 point pr. rigtigt svar og en topliste. Her er fem af de 1.000 spørgsmål, ét fra hvert forløb.',
+    quiz_note: 'Spørgsmålene står præcis, som de gør i SOPChat.',
+    /* Nabolys */
+    k_nab: 'Beredskabsapp · under udvikling',
+    nb1_h: 'Klar til de første tre døgn',
+    nb1_p: 'Nabolys hjælper en husstand gennem de første tre døgn af en krise: lager med udløbsdatoer, en 3-døgnsliste efter myndighedernes råd, en familieplan og et »Jeg er ok«-tjek-ind.',
+    nb2_h: 'Virker, når nettet er nede',
+    nb2_p: 'Telefoner tæt på hinanden sender beskeder videre over Bluetooth gennem native moduler i Kotlin og Swift. Det, familien deler, krypteres på telefonen, så serveren ikke kan læse det.',
+    nb3_h: 'Bygget med Yasir og Jawad',
+    nb3_p: 'Et holdprojekt med Yasir Teksen og Jawad Qayyum: et ASP.NET Core API på .NET 10 med Azure SQL og Entra ID, infrastruktur i Bicep, CI i GitHub Actions og over 2.300 automatiske tests.',
+    try_app: 'Prøv appen',
+    k_try_nb: 'Prøv det · Nabolys',
+    proto_h: 'Klik rundt i appen',
+    proto_note: 'Skærme fra appen med en opdigtet familie. Tryk på knapperne på telefonen, eller vælg en skærm her. Appen er ikke udgivet endnu.',
+    calc_h: 'Hvad skal din husstand have?',
+    calc_p: 'Myndighederne anbefaler, at du kan klare dig selv i tre døgn under en krise. Det er en vejledende anbefaling, ikke en pligt. Her er samme beregning som i appen, og ved hver gruppe står, hvor tallene kommer fra.',
+    calc_src: 'Kilder: <a href="https://samsik.dk/forberedt/" target="_blank" rel="noopener">Styrelsen for Samfundssikkerhed</a>, <a href="https://www.foedevarestyrelsen.dk/kost-og-foedevarer/foedevaresikkerhed/foedevareberedskab/forberedt-paa-kriser" target="_blank" rel="noopener">Fødevarestyrelsen</a> og <a href="https://www.nationalbanken.dk/da/viden-og-nyheder/presse/arkiv/2025/nationalbankens-nye-anbefalinger-om-betalinger-i-butikker-og-anden-fysisk-handel-06-10-2025" target="_blank" rel="noopener">Nationalbanken</a>. Myndighederne nævner flere ting uden mængde, og dér regner appen med mindst én. Nabolys er et privat projekt og ikke en myndighed.',
+    /* Kvixa in the shop */
+    k_try_kv: 'Prøv det · Kvixa',
+    cw_h: 'I brug hver dag i Greve',
+    cw_note: 'Chicken N Chicken Waves tager imod sine ordrer gennem Kvixa, ved to kiosker i butikken og på restaurantens egen hjemmeside.',
+    cap_cw4: 'Begge kiosker i butikken',
+    cap_cw0: 'Startskærmen på kiosken',
+    cap_cw3: 'Menuen på kiosken, med kortterminalen',
+    kv_h: 'Bestil noget, og følg det gennem restauranten',
+    kv_s1: '1. Gæsten bestiller ved kiosken',
+    kv_s2: '2. Ordren lander på kasseskærmen. Tryk Modtaget, Klar og Udleveret',
+    kv_s3: '3. Nummeret flytter sig på TV\'et',
+    kv_note: 'Et lille eksempel på flowet, kodet til den her side. Det følger de samme trin som Kvixa, og intet bliver sendt nogen steder.',
+    /* TaxaPris calculator */
+    k_try_tx: 'Prøv det · TaxaPris',
+    tx_h: 'Hvad koster turen?',
+    tx_p: 'De samme prisregler som i TaxaPris, skrevet om til JavaScript til den her side. Vælg vogn, tidspunkt og tillæg, så følger prisspecifikationen med. Prøv standardturen, den som testen tjekker.',
+    tx_note: 'I den rigtige app kommer rute, afstand og køretid fra OpenStreetMap. Taksterne for stor vogn er selskabets officielle. Taksterne for almindelig vogn er også midlertidige i projektet, sat så de rammer den officielle kontrolpris for en standardtur.',
+    /* Weft prototype and planner */
+    k_try_wf: 'Prøv det · Weft',
+    ws_h: 'Sådan ser appen ud',
+    ws_note: 'Skærmbilleder fra prototypen af Weft.',
+    cap_wa: 'Dagen samlet i én plan',
+    cap_wb: 'Skriv, hvad der er sket, så flytter Weft løbeturen',
+    cap_wc: 'Planen før og efter, klar til at blive bekræftet',
+    cap_wd: 'Det, der overlapper, side om side',
+    plan_h: 'Noget flytter sig. Hvad sker der med dagen?',
+    plan_note: 'Et lille eksempel, kodet til den her side. Det er ikke Wefts rigtige planlægger.',
+    /* more projects: Mosque-translate */
+    mt_role: 'Eget projekt · Python og AI',
+    mt_p: 'Live undertekster på dansk og tyrkisk til khutbaen, vist på en TV-skærm i moskéen. Den hører, om imamen taler arabisk eller tyrkisk, og skifter selv, og den genkender Quran-recitation blandt 6.236 vers på cirka 130 ms og viser de officielle oversættelser.',
+    mt_t: 'Tale til tekst',
+    /* how I work */
+    k_how: 'Sådan arbejder jeg',
+    h_how: 'Fire vaner, med bevis',
+    hw1_h: 'Regler bliver til tests',
+    hw1_p: 'I TaxaPris læser en test den rigtige taksfil og tjekker selskabets officielle kontrolpris. Taster nogen en forkert takst ind, fejler buildet.',
+    hw2_h: 'Sikkerhed fra starten',
+    hw2_p: 'I SOPChat tjekker serveren medlemskab ved hvert kald og rate-limiter hver bruger, og login bruger JWT med refresh tokens. Passwords er hashede, og alt input har en grænse.',
+    hw3_h: 'Automatisér vejen ud',
+    hw3_p: 'SOPChat leveres som ét Docker-image, og før hver deploy af vestegnensit.dk tjekker mine egne Node-scripts links, redirects og indekserings-headers. Kubernetes og CI/CD-pipelines er det næste.',
+    hw4_h: 'Bygget til at blive overdraget',
+    hw4_p: 'Værktøjerne til produktionsdata hos MEC APEM fulgte med en installationsguide, så medarbejdere uden programmeringserfaring kan køre dem selv.',
     n1_s: '. år',
     n1: 'Som datatekniker-elev med speciale i programmering på TEC, hvor jeg bygger fullstack-systemer hver dag',
     n2: 'Sider på vestegnensit.dk, firmasiden jeg bygger og driver med mine egne SEO-værktøjer',
@@ -235,6 +300,10 @@
     const cv = l === 'da' ? 'Mirsad-Kose-CV.pdf' : 'Mirsad-Kose-CV-EN.pdf';
     document.querySelectorAll('[data-cv]').forEach(a => { a.href = 'assets/' + cv; a.download = cv; });
     measure();
+    proofKey = undefined;
+    showProof();
+    /* the demos draw their own text, so they redraw when they hear this */
+    document.dispatchEvent(new Event('langchange'));
   }
   document.querySelectorAll('#langbtn,#langbtn2').forEach(b =>
     b.addEventListener('click', () => {
@@ -261,15 +330,72 @@
     if (!stored) setTheme(e.matches, false);
   });
 
-  /* ---------- word splitting for the claim scene ---------- */
+  /* ---------- word splitting for the claim scene ----------
+     A phrase wrapped in .ph[data-proof] keeps its wrapper, and remembers the index
+     of its first word, so it knows when it has lit up and its proof can show. */
   function splitWords(el) {
-    const words = el.textContent.trim().split(/\s+/);
-    el.innerHTML = words
-      .map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`)
-      .join(' ');
-    el.style.setProperty('--n', words.length);
+    let i = 0;
+    const wrap = text => text.split(/(\s+)/)
+      .map(t => (!t || /^\s+$/.test(t)) ? t : `<span class="w" style="--i:${i++}">${t}</span>`)
+      .join('');
+    let html = '';
+    el.childNodes.forEach(node => {
+      if (node.nodeType === 3) { html += wrap(node.textContent); return; }
+      if (node.nodeType !== 1) return;
+      const key = node.dataset.proof;
+      const first = i;
+      const inner = wrap(node.textContent);
+      html += key ? `<span class="ph" data-proof="${key}" data-first="${first}">${inner}</span>` : inner;
+    });
+    el.innerHTML = html.trim();
+    el.style.setProperty('--n', i);
   }
   document.querySelectorAll('[data-words]').forEach(splitWords);
+
+  /* ---------- the claim's proof: one line of evidence per phrase, as it lights up ---------- */
+  const PROOF = {
+    whole: {
+      en: 'SOPChat has four clean layers from Domain to API, a real-time SignalR hub, an admin dashboard and an Angular client, and it ships as one Docker image.',
+      da: 'SOPChat har fire rene lag fra Domain til API, en SignalR-hub i realtid, et admin-dashboard og en Angular-klient, og det leveres som ét Docker-image.'
+    },
+    stack: {
+      en: 'TaxaPris goes from tariff rules and xUnit tests in .NET to the Angular screen customer service types into. You can try it further down.',
+      da: 'TaxaPris går fra takstregler og xUnit-tests i .NET til den Angular-skærm, kundeservice taster i. Du kan prøve den længere nede.'
+    },
+    live: {
+      en: 'Kvixa takes the orders at Chicken N Chicken Waves in Greve every day, and my data tools run on the factory floor at MEC APEM.',
+      da: 'Kvixa tager imod ordrerne hos Chicken N Chicken Waves i Greve hver dag, og mine dataværktøjer kører i produktionen hos MEC APEM.'
+    }
+  };
+  const claimSec = document.querySelector('.claim');
+  const claimText = document.querySelector('.claim-text');
+  const proofEl = document.getElementById('proof');
+  let proofKey;
+  function showProof() {
+    if (!claimText || !proofEl) return;
+    if (reduced) {
+      /* nothing sweeps, so every proof is shown at once */
+      proofEl.textContent = Object.values(PROOF).map(p => p[lang]).join(' ');
+      return;
+    }
+    const p = (claimSec && claimSec._p) || 0;
+    const n = parseFloat(claimText.style.getPropertyValue('--n')) || 1;
+    const parts = [...claimText.querySelectorAll('.ph')];
+    /* a phrase can start once its first word is well lit (the CSS opacity formula solved for p),
+       and the scroll left after the first one is shared evenly, so no proof flashes by */
+    const natural = parts.map(el => (+el.dataset.first + 0.2) / (n + 2));
+    const t0 = natural[0] || 0;
+    const starts = natural.map((t, i) => Math.max(t, t0 + i * (1 - t0) / parts.length));
+    let key = null;
+    parts.forEach((el, i) => { if (p >= starts[i]) key = el.dataset.proof; });
+    if (key === proofKey) return;
+    proofKey = key;
+    parts.forEach(el => el.classList.toggle('on', el.dataset.proof === key));
+    proofEl.textContent = key ? PROOF[key][lang] : '';
+    proofEl.classList.remove('in');
+    void proofEl.offsetWidth;
+    proofEl.classList.add('in');
+  }
 
   /* ---------- mobile menu ---------- */
   const burger = document.getElementById('burger');
@@ -433,6 +559,8 @@
     // counters fire once their band is a third of the way up the screen
     if (numbers && numbers._p > 0.35) counters.forEach(runCounter);
 
+    showProof();
+
     requestAnimationFrame(frame);
   }
 
@@ -464,9 +592,23 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
   measure();
 
+  /* the demos change height (a list opens, an order lands), and every pinned
+     scene below them then sits somewhere else: measure again when the page grows or shrinks */
+  if ('ResizeObserver' in window) {
+    let lastH = document.body.offsetHeight, queued = false;
+    new ResizeObserver(() => {
+      const h = document.body.offsetHeight;
+      if (h === lastH || queued) return;
+      lastH = h;
+      queued = true;
+      requestAnimationFrame(() => { queued = false; measure(); });
+    }).observe(document.body);
+  }
+
   if (reduced) {
     // CSS pins --p to 1 and flattens the pinned scenes; just finish the numbers
     counters.forEach(runCounter);
+    showProof();
   } else {
     requestAnimationFrame(frame);
   }
